@@ -15,8 +15,22 @@ main(){
 }
 
 abstract class Duck{
-  FlyBehavior flybehavior;
-  QuackBehavior quackbehavior;
+  FlyBehavior _flybehavior;
+  QuackBehavior _quackbehavior;
+  
+  Duck(QuackBehavior quackbehavior, FlyBehavior fb)
+    : this._flybehavior =fb,
+      this._quackbehavior = quackbehavior;
+  
+  
+  
+  fly(){
+    _flybehavior.fly();
+  }
+  
+  quack(){
+    _quackbehavior.quack();
+  }
   
   swim(){
     print("Swim swim swim");
