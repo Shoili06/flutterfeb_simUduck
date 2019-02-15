@@ -14,18 +14,14 @@ main(){
   woodenduck.quack();
 }
 
-abstract class Duck implements Flyable,Quackable{
+abstract class Duck{
+  FlyBehavior flybehavior;
+  QuackBehavior quackbehavior;
+  
   swim(){
     print("Swim swim swim");
   }
   
-  /*quack(){
-    print("Quack quack quack ");
-  }
-  
-  fly(){
-    print("Flap flap flap");
-  }*/
 }
 
 class MallardDuck extends Duck{
